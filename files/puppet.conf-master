@@ -1,0 +1,26 @@
+
+[master]
+    # These are needed when the puppetmaster is run by passenger
+    # and can safely be removed if webrick is used.
+    ssl_client_header = HTTP_X_CLIENT_DN
+    ssl_client_verify_header = HTTP_X_CLIENT_VERIFY
+
+    facts_terminus = inventory_active_record
+    dblocation = /var/lib/puppet/state/clientconfigs.sqlite3
+    dbadapter = sqlite3
+
+    storeconfigs = true
+
+    node_terminus = plain
+    # node_terminus = exec
+    # external_nodes = /usr/bin/env PUPPET_DASHBOARD_URL=http://puppet:80 /usr/share/puppet-dashboard/bin/external_node
+
+    reports = store
+    # reports = store, http
+    # reporturl = http://puppet:80/reports/upload
+
+    # Dynamic environments
+    environment = production
+    manifest = $confdir/environments/$environment/manifests/site.pp
+    modulepath = $confdir/environments/$environment/modules
+

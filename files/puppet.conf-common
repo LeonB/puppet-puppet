@@ -1,0 +1,21 @@
+# MANAGED BY PUPPET!
+# modules/puppet/files/puppet.conf-master
+# Changes WILL BE overwritten! Any permanent changes must be checked
+# into git.
+
+[main]
+    logdir=/var/log/puppet
+    vardir=/var/lib/puppet
+    ssldir=/var/lib/puppet/ssl
+    rundir=/var/run/puppet
+    factpath=$vardir/lib/facter
+    templatedir=$confdir/templates
+    preferred_serialization_format=yaml
+    # prerun_command=/etc/puppet/etckeeper-commit-pre
+    # postrun_command=/etc/puppet/etckeeper-commit-post
+    configtimeout = 600
+
+[agent]
+    environment=dev
+    pluginsync=true
+    report=true

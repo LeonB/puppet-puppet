@@ -1,0 +1,12 @@
+# MANAGED BY PUPPET!
+# modules/puppet/files/default/puppet
+# Changes WILL BE overwritten! Any permanent changes must be checked
+# into git.
+
+# Defaults for puppet - sourced by /etc/init.d/puppet
+
+# Start puppet on boot?
+START=yes
+
+# Startup options
+DAEMON_OPTS=""
