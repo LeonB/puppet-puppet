@@ -10,12 +10,16 @@
     rundir=/var/run/puppet
     factpath=$vardir/lib/facter
     templatedir=$confdir/templates
-    preferred_serialization_format=yaml
+    # preferred_serialization_format=yaml
     # prerun_command=/etc/puppet/etckeeper-commit-pre
     # postrun_command=/etc/puppet/etckeeper-commit-post
-    configtimeout = 600
+    # filetimout checks whether a file has changed on disk
+    filetimeout = 2m
+    # configtimeout = max time to retrieve configuration
+    configtimeout = 2m
+    trace = false
 
 [agent]
     environment=dev
     pluginsync=true
-    report=true
+    report=false

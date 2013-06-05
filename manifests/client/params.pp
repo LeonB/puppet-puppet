@@ -16,9 +16,10 @@ class puppet::client::params {
 
   ### Application related parameters
 
-  $package_name = $::operatingsystem ? {
+  $packages = $::operatingsystem ? {
     default => 'puppet'
   }
 
-  $repository_release = $lsbdistcodename
+  $enabled = true
+
 }

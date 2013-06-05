@@ -9,7 +9,7 @@
     dblocation = /var/lib/puppet/state/clientconfigs.sqlite3
     dbadapter = sqlite3
 
-    storeconfigs = true
+    storeconfigs = false
 
     node_terminus = plain
     # node_terminus = exec

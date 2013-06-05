@@ -1,11 +1,11 @@
 class puppet::config {
 
-	file { '/etc/puppet/':
-		owner => puppet,
-		group => puppet,
-		mode => 0606,
-		recurse => true
-	}
+	# file { '/etc/puppet/':
+	# 	owner => puppet,
+	# 	group => puppet,
+	# 	mode => 0606,
+	# 	recurse => true
+	# }
 
 	file { '/etc/puppet/etckeeper-commit-post':
 		mode => 0700,

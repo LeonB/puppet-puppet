@@ -1,4 +1,4 @@
-# Class: puppet::master::params
+# Class: puppet::params
 #
 # This class defines default parameters used by the main module class puppet
 # Operating Systems differences in names and paths are addressed here
@@ -12,11 +12,15 @@
 # This class is not intended to be used directly.
 # It may be imported or inherited by other classes
 #
-class puppet::master::params {
+class puppet::params {
 
   ### Application related parameters
 
   $packages = $::operatingsystem ? {
-    default => 'puppetmaster',
+    default => 'puppet'
   }
+
+  $enabled = true
+
+  $repository_release = $lsbdistcodename
 }
