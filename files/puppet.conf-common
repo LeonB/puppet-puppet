@@ -20,6 +20,6 @@
     trace = false
 
 [agent]
-    environment=dev
+    environment=ubuntu
     pluginsync=true
     report=false

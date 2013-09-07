@@ -2,7 +2,7 @@ class puppet::client::package inherits puppet::package {
 
 	package { "${puppet::client::package_name}":
 		ensure  => present,
-		require => Apt::Source['puppetlabs']
+		# require => Apt::Source['puppetlabs']
 	}
 
 	package { 'libaugeas-ruby':
